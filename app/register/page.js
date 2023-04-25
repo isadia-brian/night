@@ -83,7 +83,7 @@ const Register = () => {
             className="cursor-pointer bg-green-800 text-white font-bold uppercase py-3 px-2 rounded-lg outline-none w-full "
           />
         </form>
-        <div className="flex w-full items-center md:flex-row-reverse ">
+        <div className="flex w-full items-center justify-center ">
           <Link href="/login" className="text-sm text-green-800">
             Already have an account Login ?
           </Link>
