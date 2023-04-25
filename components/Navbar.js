@@ -10,6 +10,8 @@ import Button from "./Button";
 import { useState, useEffect } from "react";
 import { FaUserCircle } from "react-icons/fa";
 
+import DateRange from "./Calendar";
+
 const kugile = localFont({ src: "../public/kugile/Kugile_Demo.ttf" });
 const poppins = localFont({ src: "../public/poppins/Poppins-Regular.ttf" });
 const Navbar = () => {
@@ -33,8 +35,8 @@ const Navbar = () => {
       link: "/house",
     },
     {
-      title: "Gallery",
-      link: "/",
+      title: "Movie",
+      link: "/movies",
     },
     {
       title: "Contact us",
@@ -74,36 +76,7 @@ const Navbar = () => {
             <Image src="/logo.jpeg" alt="logo" fill className="rounded-full" />
           </div>
         </div>
-        <div className="md:flex w-[550px] items-center shadow-md rounded-full text-black bg-green-50 py-2 pl-6 pr-3 cursor-pointer hidden">
-          <div className="flex items-center justify-around flex-grow">
-            <div className="flex flex-col border-r-[1px] pr-9 border-gray-300">
-              <label>Arrival</label>
-              {/* <input
-              type="text"
-              className="outline-none bg-inherit border-b-[0.8px] "
-            /> */}
-            </div>
-            <div className="flex flex-col border-r-[1px] border-gray-300 pr-9">
-              <label>Departure</label>
-              {/* <input
-              type="text"
-              className="outline-none bg-inherit border-b-[0.8px] "
-            /> */}
-            </div>
-            <div className="flex flex-col mr-2 pr-2">
-              <label className="text-gray-500">Add Guests</label>
-              {/* <input
-              type="text"
-              className="outline-none bg-inherit border-b-[0.8px] "
-            /> */}
-            </div>
-          </div>
-          <div>
-            <button className="bg-green-800 text-white flex items-center justify-between px-3 py-3 text-sm font-extrabold rounded-full">
-              CHECK AVAILABILITY
-            </button>
-          </div>
-        </div>
+        <DateRange />
         <div className="h-8 w-8 rounded-md hidden md:flex">
           <FaUserCircle className="text-2xl text-black" />
         </div>
